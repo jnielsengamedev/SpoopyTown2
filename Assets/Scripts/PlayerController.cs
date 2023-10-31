@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 	{
 		//Move Forward
 		verticalInput = Input.GetAxis("Vertical");
-		transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed * verticalInput);
+		transform.Translate(Vector3.forward * (Time.deltaTime * moveSpeed * verticalInput));
 		animator.SetFloat("verticalInput", Mathf.Abs(verticalInput));
 
 		//Rotate
